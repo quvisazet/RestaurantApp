@@ -1,0 +1,12 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" class="p-4">
+      <label>Nom</label>
+      <input class="form-control" [(ngModel)]="plat.nom" type="text" name="name">
+      <label>Description</label>
+      <input class="form-control" [(ngModel)]="plat.description" type="text" name="description">
+      <label>Prix</label>
+      <input class="form-control" [(ngModel)]="plat.prix" type="number" name="prix">
+      <button class="btn btn-outline-primary mt-4" type="submit">Submit</button>
+    </form>
+    Status : {{state}}
+  </div>

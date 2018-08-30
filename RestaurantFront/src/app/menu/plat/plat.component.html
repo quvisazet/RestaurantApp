@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card my-4">
+    <div class="card-body">
+      <h5 class="card-title">{{plat.nom}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Prix : {{plat.prix}}€</h6>
+      <p class="card-text">{{plat.description}}</p>
+      <p >ID : {{plat.id}}</p>
+      <form (ngSubmit)="onSubmit()">
+        <input type="submit" class="btn btn-outline-danger" value="supprimer">
+      </form>
+      <button class="btn btn-primary" (click)="modify()">Modify</button>
+    </div>
+  </div>
+  <app-modify *ngIf="editMode" [plat]="plat"></app-modify>
+</div>

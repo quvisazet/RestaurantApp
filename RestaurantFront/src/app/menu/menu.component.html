@@ -1,4 +1,15 @@
-<h1>Plats</h1>
-<div *ngFor="let plat of output">
-  <p>{{plat.nom}} | {{plat.description}} | {{plat.prix}}</p>
+<div class="container">
+  <h1>Plats</h1>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let plat of output">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{plat.nom}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Prix : {{plat.prix}}€</h6>
+          <p class="card-text">{{plat.description}}</p>
+          <a [routerLink]="['platDetail',plat.id]" class="card-link">Plus de details</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
